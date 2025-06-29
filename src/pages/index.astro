@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Hero from '../components/Hero.jsx';
+import Features from '../components/Features.jsx';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Calafold - Software Development Company">
+	<header>
+		<nav>
+			<div class="nav-container">
+				<div class="logo">
+					<h2>Calafold</h2>
+				</div>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<Hero client:load />
+		<Features client:load />
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2024 Calafold. All rights reserved.</p>
+			<p>Building the future, one line of code at a time.</p>
+			</div>
+	</footer>
 </Layout>
